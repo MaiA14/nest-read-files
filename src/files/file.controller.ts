@@ -1,8 +1,8 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { FileService } from './file.service';
 
-@Controller('csv')
-export class CsvController {
+@Controller('File')
+export class FileController {
   constructor(private readonly csvService: FileService) {}
 
   @Get(':filePath')
