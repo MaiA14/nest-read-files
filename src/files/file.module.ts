@@ -6,4 +6,4 @@ import { FileService } from './file.service';
   controllers: [FileController],
   providers: [FileService],
 })
-export class CsvModule {}
+export class FileModule {}
