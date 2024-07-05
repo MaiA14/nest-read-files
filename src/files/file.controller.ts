@@ -3,15 +3,15 @@ import { FileService } from './file.service';
 
 @Controller('File')
 export class FileController {
-  constructor(private readonly csvService: FileService) {}
+  constructor(private readonly fileService: FileService) {}
 
   @Get(':filePath')
-  async getCsvData(@Param('filePath') filePath: string): Promise<any[]> {
+  async getFileData(@Param('filePath') filePath: string): Promise<any[]> {
     try {
-      const data = await this.csvService.readFile(filePath);
+      const data = await this.fileService.readFile(filePath);
       return data;
     } catch (error) {
-      throw new Error(`Error reading CSV file: ${error.message}`);
+      throw new Error(`Error reading file: ${error.message}`);
     }
   }
 }
