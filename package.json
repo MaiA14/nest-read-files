@@ -2,7 +2,7 @@
   "name": "nest-csv-reader-app",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "mai a",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -11,7 +11,7 @@
     "copy:files": "cp -r src/files/files_samples dist/files_samples", 
     "postbuild": "npm run copy:files",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "npm run build && npm run start:prod",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
